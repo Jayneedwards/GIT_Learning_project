@@ -1,0 +1,25 @@
+//I'm a partial - so please ensure all my CSS elements have a Namespace particular to this partial
+
+#siteFooter{background-color:$bright-blue;min-height:200px;margin-top:15px;}
+
+#footerContent{color:$light-grey;}
+
+#footerContent h3, #footerContent a, #footerBottom a {color:$white;font-weight:400;}
+
+#footerContent dd {
+	margin-bottom:20px;
+
+}
+#footerContent dt a {
+	font-weight:600;
+}
+
+#footerContent .lead {
+	font-size:48px;
+}
+
+#footerContent .btn-primary {
+background-color: #f05a28;
+}
+
+#footerBottom {background-color:$dark-grey;min-height:95px;padding-top:15px;}

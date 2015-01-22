@@ -1,0 +1,31 @@
+//I'm a partial - so please ensure all my CSS elements have a Namespace particular to this partial
+
+
+.btn {
+	background-image: none;
+	filter: none;
+	background-repeat: none;
+	font-size: 15px;
+	padding:10px 10px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	text-shadow: 0 0px 0px rgba(255, 255, 255, 0.75);
+	border-color: none;
+	border:0px;
+	box-shadow:none;
+	text-shadow: none;
+}
+
+.btn-primary:hover {
+	background: darken($dark-grey, 10%);
+}
+
+.btn-lg {
+border-radius: 0px;
+text-transform:uppercase;
+}
+
+.btn-primary:hover { border-color: none; }
+
+

@@ -1,0 +1,362 @@
+// Default Styles
+// Description: Set all default general styles and classes here
+
+html, body { 
+	min-height: 100%; 
+	height: 100%; 
+}
+
+//Header Resets - some of these are bootstrap related
+
+.well h2, .jumbotron h2{margin-top:0px;}
+
+a { 
+	color: $yellow;
+	text-decoration: none !important;
+	@include transition();
+	&:hover,&:focus {
+		color: $pumpkin;
+	}
+}
+
+body {
+	font-family: $font-primary;
+	font-size:16px;
+	-webkit-font-smoothing: subpixel-antialiased;
+    -webkit-text-size-adjust:none;
+    background-color:$light-grey;
+    color:$default;
+}
+
+.clear { 
+	&:after,
+	&:before { 
+		content: "";
+		display: table;
+	}
+	&:after { 
+		clear: both;
+	}
+	*zoom: 1;
+}
+
+.hide-text { 
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+h1 {
+	font-weight:700;
+}
+
+img { 
+	border: none; 
+	&.responsive { 
+		max-width: 100%;
+		height: auto;	
+	}
+}
+
+.left { 
+	float: left; 
+}
+
+.right { 
+	float: right; 
+}
+
+table { 
+	td { 
+		vertical-align: top;
+	}
+	width: 100%; 
+}
+
+ul { 
+	list-style-type: none;
+	margin-bottom: 10px;
+	padding: 0;
+}
+
+ol {
+	margin: 0 0 10px 19px;
+	padding: 0;
+}
+
+.highlight {
+	color:$burnt-orange;
+	font-weight:600;
+}
+
+//Quotes
+blockquote {
+  border-left: 5px solid $burnt-orange;
+  }
+  
+.blockquote-reverse {
+	  border-right: 5px solid $burnt-orange;
+	  font-style:italic;
+}
+
+//Address
+
+address {font-weight:bold;}
+
+//Breadcrumb
+ol.breadcrumb {
+  padding: 15px 0;
+  margin: 0 0px;
+  list-style: none;
+
+  > li {
+    display: inline-block;
+
+    + li:before {
+      content: "/";// Unicode space added since inline-block means non-collapsing white-space
+      padding: 0 10px;
+      color: $dark-grey;
+    }
+  }
+
+  > .active {
+    color: $dark-grey;
+  }
+}
+
+//Related content
+.group {
+  min-height: 20px;
+  margin-bottom: 20px;
+  background-color: $white;
+  border: 0px;
+  border-radius:0px;
+  box-shadow:0;
+  blockquote {
+    border-color: #ddd;
+    border-color: rgba(0,0,0,.15);
+  }
+  p, h2, h3 {
+	  padding: 0 19px;	  
+  }
+  
+  h2 {
+	  padding-top:5px;
+  }
+  
+  img {
+	  display: block;
+	  height: auto;
+	  width: 100%;
+	  margin:0;
+	  padding:0;
+  }
+}
+.group a {
+	margin-bottom:19px;
+}
+
+// List group
+.list-group {
+  // No need to set list-style: none; since .list-group-item is block level
+  margin: 0 -15px 20px -15px;
+  padding-left: 0; // reset padding because ul and ol
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  // Place the border on the list items and negative margin up for better styling
+  margin-bottom: -1px;
+  background-color: transparent;
+  border: 0px;
+}
+
+// Round the first and last items
+  .list-group-item:first-child {
+    border-top-radius:0;
+  }
+  .list-group-item:last-child {
+    margin-bottom: 0;
+    border-bottom-radius:0;
+  }
+
+.list-group-item a {
+    background-color: $mid-grey;
+    display:block;
+	padding: 9px 15px;
+
+
+  .list-group-item-heading {
+    color: $dark-grey;
+  }
+
+  // Hover state
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: $dark-grey;
+    color:$white;
+  }
+
+  // Active class on item itself, not parent
+  &.active,
+  &.active:hover,
+  &.active:focus {
+    z-index: 2; // Place active items above their siblings for proper border styling
+    color: $white;
+    background-color: $dark-grey;
+    border-color: $dark-grey;
+  }
+}
+
+
+
+//text styling
+
+//bs-callout (like Bootstrap documentation)
+.bs-callout{padding:20px;margin:20px 0;border:1px solid #eee;border-left-width:5px;border-radius:3px}
+.bs-callout h4{margin-top:0;margin-bottom:5px}
+.bs-callout p:last-child{margin-bottom:0}
+.bs-callout code{border-radius:3px}
+.bs-callout+.bs-callout{margin-top:-5px}
+.bs-callout-danger{border-left-color:#d9534f}
+.bs-callout-danger h4{color:#d9534f}
+.bs-callout-warning{border-left-color:#f0ad4e}
+.bs-callout-warning h4{color:#f0ad4e}
+.bs-callout-info{border-left-color:#5bc0de}
+.bs-callout-info h4{color:#5bc0de}
+
+
+
+//landing pages
+
+.landing {
+	margin:0 0 40px 0;
+	img {
+		float:right;
+		margin-left:15px;
+		max-height:280px;
+		overflow:hidden;
+	}
+	
+	p {
+		padding:0 15px 15px 0;
+	}
+	
+	h2 {
+		padding:15px 15px 15px 0;		
+	}
+}
+
+@media (min-width:0px) and (max-width:919px) {
+.landing img {
+	width:100%;
+	padding:0;
+}	
+}
+
+.landing-row-one, .related-general-story {
+	background-color:$dark-blue;
+	color:$light-grey;
+	
+	.btn-primary {background-color:$green;}
+
+}
+.landing-row-two, .related-child-story {
+	background-color:$bright-blue;
+	color:$light-grey;
+	
+	.btn-primary {background-color:$dark-blue;}	
+	
+}
+.landing-row-three, .related-adult-story {
+	background-color:$yellow;
+	color:$light-grey;
+	
+	.btn-primary {background-color:$burnt-orange;}
+		
+}
+.landing-row-four {
+	background-color:$burnt-orange;
+	color:$light-grey;
+	
+	.btn-primary {background-color:$yellow;}
+	
+				
+}
+.landing-row-five {
+	background-color:$green;
+	color:$light-grey;
+	
+	.btn-primary {background-color:$dark-blue;}
+		
+}
+
+.landing-list li{display:block;padding:7px;position:relative;}
+.landing-list li a{display:block;background:$clouds;padding:7px;min-height:120px;@include border-radius-whole(7px);}
+.landing-list li a p{color:$dark-grey;}
+.landing-list li a:hover{background-color:#d8d8d8;}
+.landing-list i{margin:-10px 0px 0px 20px;line-height:120px;vertical-align:middle;float:left;width:120px;height:120px;font-size:80px;color:$dark-grey;z-index: 6;}
+.landing-list h3{color:$peter-river;margin:0px 0px 5px 0px;}
+.more-links li{display:inline;padding:0 5px 0 0px;}
+.more-links li:after{content:" |";}
+
+//cta list
+.cta-list li{display:block;padding:7px;text-align: center;}
+.cta-list li a{display:block;padding:7px;min-height:120px;@include border-radius-whole(7px);}
+.cta-list li a p{color:$dark-grey;}
+.cta-list li a:hover{background:$white;}
+.cta-list img {line-height:120px;vertical-align: middle;display:block;margin: 0 auto;}
+.cta-list h3{color:$pumpkin;margin:0px 0px 5px 0px;font-weight:400;}
+
+//List pages
+.listPage .jumbotron img{float:left;margin-right:20px;}
+.listPageList li img.thumbnail{float:left;max-height:125px;margin-right:20px;}
+.listPageList{list-style:none!important;}
+.listPageList li {min-height:145px;padding-bottom:0 20px 0 20px;border-bottom: 1px solid $clouds;}
+p.meta{font-style: italic;font-size: 80%;}
+.superscript {vertical-align:super;font-size: 70%;}
+
+//Detail page
+
+//inline images
+.imgHolder img{max-width:100%!important;height:auto;}
+.imgCaption{font-size:80%;font-style: italic;}
+#content ul{list-style: disc;margin-left:20px;}
+
+//event lists
+
+.list-group-event-item {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  // Place the border on the list items and negative margin up for better styling
+  margin-bottom: -1px;
+  margin-left: -20px;
+  background-color: $white;
+  border-top:1px solid $silver;
+
+  // Round the first and last items
+  &:first-child {
+    border-radius:0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+    border-radius:0;
+    border-bottom:1px solid $silver;
+  }
+  
+  > span {
+    float: right;
+    margin-right: 5px;
+    color:$burnt-orange;
+  }
+
+}
+
+@media  (max-width: 480px) {
+ .list-group-event-item > span {
+    float: none;
+    }
+    }

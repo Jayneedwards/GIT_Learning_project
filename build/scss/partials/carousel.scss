@@ -1,0 +1,77 @@
+//I'm a partial - so please ensure all my CSS elements have a Namespace particular to this partial
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 15px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 1;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 480px;
+  background-color:$mid-grey;
+}
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 480px;
+}
+
+/*carousel left and right arrows*/
+.carousel-control {
+    width: 0;
+}
+.carousel-control.left,
+.carousel-control.right {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	background-image: none;
+	background-repeat: no-repeat;
+	text-shadow: none;
+}
+
+.carousel-control .fa-chevron-left, 
+.carousel-control .fa-chevron-right
+{
+	position: absolute;
+	top: 45%;
+	z-index: 5;
+	display: inline-block;
+}
+
+.carousel-control .fa-chevron-left
+ {
+	left: 0;
+}
+
+.carousel-control .fa-chevron-right,
+ {
+	right: 0;
+}
+
+.carousel-control.left span,
+.carousel-control.right span {
+	background-color: $midnight-blue;
+	padding: 15px;
+}
+
+.carousel-control.left span:hover,
+.carousel-control.right span:hover {
+	opacity: .7;
+	filter: alpha(opacity=70);
+}
+/* Overlayed text */
+.overlay { 
+  color:#fff;
+  position:absolute;
+  z-index:12;
+  top:40%;
+  left:0;
+  width:100%;
+  text-align:center;
+}
+

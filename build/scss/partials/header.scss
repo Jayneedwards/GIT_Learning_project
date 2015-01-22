@@ -1,0 +1,16 @@
+//I'm a partial - so please ensure all my CSS elements have a Namespace particular to this partial
+
+#siteHeader{background-color:$light-grey;min-height:80px;border-bottom:1px solid $mid-grey;}
+
+#siteHeader .branding {min-height:75px;margin:10px 0 0 0px;}
+
+#siteHeader .navbar-default {
+  background-color: transparent;
+  border-color: transparent; }
+
+
+  header .navbar        { float: left;}
+  header .navbar li     { margin: 0; text-align:left ; display: block ; float: left ;  min-width: 146px; margin-right:9px; margin-bottom:10px;}
+
+
+

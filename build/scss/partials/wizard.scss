@@ -1,0 +1,201 @@
+//I'm a partial - so please ensure all my CSS elements have a Namespace particular to this partial
+
+.wizard {
+  *zoom: 1;
+  border: 1px solid $mid-grey;
+  border-radius: 0px;
+  box-shadow: 0;
+  background-color:$light-grey;
+  position: relative;
+  min-height: 48px;
+  overflow: hidden;
+}
+.wizard:before,
+.wizard:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.wizard:after {
+  clear: both;
+}
+.wizard > .steps {
+  list-style: none outside none;
+  padding: 0;
+  margin: 0;
+  width: 4000px;
+}
+ .wizard > .steps.previous-disabled li.complete {
+  cursor: default;
+}
+.wizard > .steps.previous-disabled li.complete:hover {
+  background: #f3f4f5;
+  color: $green;
+  cursor: default;
+}
+.wizard > .steps.previous-disabled li.complete:hover .chevron:before {
+  border-left-color: #f3f4f5;
+}
+.wizard > .steps li {
+  float: left;
+  margin: 0;
+  padding: 0 10px 0 20px;
+  height: 46px;
+  line-height: 46px;
+  position: relative;
+  background: #ededed;
+  color: $dark-grey;
+  font-size: 16px;
+  cursor: not-allowed;
+  list-style:none;
+}
+.wizard > .steps li .chevron {
+  border: 24px solid transparent;
+  border-left: 14px solid $mid-grey;
+  border-right: 0;
+  display: block;
+  position: absolute;
+  right: -14px;
+  top: 0;
+  z-index: 1;
+}
+.wizard > .steps li .chevron:before {
+  border: 24px solid transparent;
+  border-left: 14px solid #ededed;
+  border-right: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  right: 1px;
+  top: -24px;
+}
+.wizard > .steps li.complete {
+  background: #f3f4f5;
+  color: $green;
+}
+.wizard > .steps li.complete:hover {
+  background: #e7eff8;
+  cursor: pointer;
+}
+.wizard > .steps li.complete:hover .chevron:before {
+  border-left: 14px solid #e7eff8;
+}
+.wizard > .steps li.complete .chevron:before {
+  border-left: 14px solid #f3f4f5;
+}
+.wizard > .steps li.active {
+  background: #f1f6fc;
+  color: $bright-blue;
+  cursor: default;
+}
+.wizard > .steps li.active .chevron:before {
+  border-left: 14px solid #f1f6fc;
+}
+.wizard > .steps li.active .badge {
+  background-color: $bright-blue;
+}
+.wizard > .steps li .badge {
+  margin-right: 8px;
+}
+.wizard > .steps li .badge-success {
+  background-color: $green;
+}
+.wizard > .steps li:first-child {
+  border-radius: 4px 0 0 4px;
+  padding-left: 20px;
+}
+.wizard > .actions {
+  z-index: 1000;
+  position: absolute;
+  left: 0;
+  bottom:0;
+  line-height: 46px;
+  float: right;
+  padding-left: 15px;
+  padding-right: 15px;
+  vertical-align: middle;
+  background-color: none;
+  border-left: 0px;
+}
+.wizard > .actions a {
+  line-height: 45px;
+  font-size: 12px;
+  margin-right: 8px;
+}
+.wizard > .actions .btn-prev[disabled] {
+  cursor: not-allowed;
+}
+.wizard > .actions .btn-prev span {
+  margin-right: 5px;
+}
+.wizard > .actions .btn-next[disabled] {
+  cursor: not-allowed;
+}
+.wizard > .actions .btn-next span {
+  margin-left: 5px;
+}
+.wizard .step-content {
+  border-top: 1px solid $mid-grey;
+  padding: 10px;
+  float: left;
+  width: 100%;
+}
+.wizard .step-content .step-pane {
+  display: none;
+}
+.wizard .step-content > .active {
+  display: block;
+}
+.wizard .step-content > .active .btn-group .active {
+  display: inline-block;
+}
+.wizard.complete > .actions .glyphicon-arrow-right:before {
+  display: none;
+}
+.wizard.complete > .actions .glyphicon-arrow-right {
+  margin-left: 0;
+}
+
+
+.wizard hr {
+margin-top: 20px;
+margin-bottom: 20px;
+border: 0;
+border-top: 1px solid $bright-blue;
+}
+
+.wizard dd {
+	margin-bottom:10px;
+}
+
+
+@media  (max-width: 979px) {
+ .wizard .title {
+	 display:none;
+ }
+ 
+ .wizard > .steps li {
+ 	 padding:0 10px 0 20px;
+ }
+}
+
+@media  (max-width: 340px) {
+ .wizard .title {
+	 display:none;
+ }
+ 
+ .wizard > .steps li {
+ 	 padding:0 10px 0 20px;
+ }	
+}
+
+//wizard step summary
+
+ul.form-summary {
+	margin:10px 0;
+}
+
+ul.form-summary li {
+	list-style:none;
+	margin-left:-20px;
+} 
