@@ -81,22 +81,34 @@
 	-->  <div id="content" class="col-sm-9">
     <h1>Formal enquiry form</h1>
     <p class="lead">I am some lead text</p>
-	
-	<div class="wizard" data-initialize="wizard" id="myWizard">
-  <ul class="steps">
-    <li data-step="1" class="active"><span class="badge">1</span><span class="title">Your details</span><span class="chevron"></span></li>
-    <li data-step="2"><span class="badge">2</span><span class="title">Further details</span><span class="chevron"></span></li>
-    <li data-step="3"><span class="badge">3</span><span class="title">Your family</span><span class="chevron"></span></li>
-    <li data-step="4"><span class="badge">4</span><span class="title">Summary</span><span class="chevron"></span></li>
-  </ul>
-<form class="form-horizontal" role="form" novalidate="novalidate">
-  <div class="step-content">
-    <div class="step-pane active sample-pane alert" data-step="1">
-      <h2>Your details</h2>
-      
-<!--form step1-->      
-      
-  <!--
+
+
+  
+  
+<form class="form-horizontal FORM_horizontal">
+
+
+      <div id="rootwizard" class="FORM_wizard">
+        <ul class="nav">
+          <li><a href="#tab1" data-toggle="tab">Step 1</a></li>
+          <li><a href="#tab2" data-toggle="tab">A longer name</a></li>
+          <li><a href="#tab3" data-toggle="tab">Step 3</a></li>
+        </ul>
+
+        <div class="tab-content FORM_tab-page">
+          <div class="tab-pane" id="tab1">
+          <!--
+          ########     ###     ######   ######## 
+          ##     ##   ## ##   ##    ##  ##       
+          ##     ##  ##   ##  ##        ##       
+          ########  ##     ## ##   #### ######   
+          ##        ######### ##    ##  ##       
+          ##        ##     ## ##    ##  ##       
+          ##        ##     ##  ######   ######## 
+          -->
+
+
+              <!--
                _            _   _               
               | |          | | | |              
               | |_ _____  _| |_| |__   _____  __
@@ -449,21 +461,118 @@
                 <div class="FORM_validationFeedback"><span>(optional) validation text here</span></div>
                 </div>
               </div>  
-      
 
-  
- 
-<!--/form step1 end-->        
- 
-    </div>
-    <div class="step-pane sample-pane alert" data-step="2">
-      <h2>Further details</h2>
+            </div><!--tab1-->  
+            <div class="tab-pane" id="tab2">
+            <!--
+            ########     ###     ######   ######## 
+            ##     ##   ## ##   ##    ##  ##       
+            ##     ##  ##   ##  ##        ##       
+            ########  ##     ## ##   #### ######   
+            ##        ######### ##    ##  ##       
+            ##        ##     ## ##    ##  ##       
+            ##        ##     ##  ######   ######## 
+            -->
 
-<!--form step2 -->       
 
-  
+            <!--
+                                                           _     
+                                                          | |    
+               _ __   __ _ _ __ __ _  __ _ _ __ __ _ _ __ | |__  
+              | '_ \ / _` | '__/ _` |/ _` | '__/ _` | '_ \| '_ \ 
+              | |_) | (_| | | | (_| | (_| | | | (_| | |_) | | | |
+              | .__/ \__,_|_|  \__,_|\__, |_|  \__,_| .__/|_| |_|
+              | |                     __/ |         | |          
+              |_|                    |___/          |_|                                       
 
-                <ol class="FORM_repeater-group">
+                                                    
+                                                     
+              author: Dominic Jones
+              date: 1 Dec 2014
+              version: 1.0 
+
+              Naming
+              ------
+              Control-Group id: F(n)_T(n)_P(n) 
+               
+
+            -->
+              <div class="FORM_control-group" id="F1_T2_P1">
+                <div class="nodeContent">
+                  <p>Big band tailfin geometric pocket square mid-century skinny lapel googie, frutiger brylcreem creative highway atompunk zephyr! Futuristic sassy ring-a-ding bakelite kodachrome geometric space-age atompunk, roadside hostess trolley executive naugahyde hip, modern frutiger dieter rams bourbon creative son of a bitch beatnik naugahyde whiskey.</p>
+                </div>
+              </div>
+
+
+              <!--
+                         _     _                     _             _                
+                        | |   | |                   | |           | |               
+                __ _  __| | __| |_ __ ___  ___ ___  | | ___   ___ | | ___   _ _ __  
+               / _` |/ _` |/ _` | '__/ _ \/ __/ __| | |/ _ \ / _ \| |/ / | | | '_ \ 
+              | (_| | (_| | (_| | | |  __/\__ \__ \ | | (_) | (_) |   <| |_| | |_) |
+               \__,_|\__,_|\__,_|_|  \___||___/___/ |_|\___/ \___/|_|\_\\__,_| .__/ 
+                                                                             | |    
+                                                                             |_| 
+              author: Dominic Jones
+              date: 27 Nov 2014
+              version: 1.0   
+
+              Naming:
+              -------
+
+              Control-group id : F(n)_T(n)_AL(n)
+              input ids/classes: F(n)_T(n)_AL(n)_postcode         .AL_postcode
+                                 F(n)_T(n)_AL(n)_addLookupBtn     .AL_addLookupBtn
+                                 F(n)_T(n)_AL(n)_address (hidden) .AL_address
+                                 F(n)_T(n)_AL(n)_addDropDown      .AL_addDropDown
+                                 F(n)_T(n)_AL(n)_AM_add1          .AL_AM_add1
+                                 F(n)_T(n)_AL(n)_AM_street        .AL_AM_street
+                                 F(n)_T(n)_AL(n)_AM_district      .AL_AM_district
+                                 F(n)_T(n)_AL(n)_AM_city          .AL_AM_city
+                                 F(n)_T(n)_AL(n)_AM_postcode      .AL_AM_postcode
+
+              -->
+              <div class="FORM_control-group FORM_AL" id="F1_P2_AL1">
+
+                <!--  NOTE the lack of a helper. The control must be simple enough to use WITHOUT 
+                      Requiring a helper. If it needs a helper, then it's designed wrong! -->
+
+                <label class="control-label FORM_label" for="F1_P2_AL1_postcode">Address Lookup</label>         
+                <div class="controls FORM_controls">
+                  <input type="text" id="F1_P2_AL1_postcode" placeholder="POSTCODE" class="AL_postcode input-small"><input type="hidden" id="F1_P2_AL1_address" name="F1_P2_AL1_address" class="AL_address">
+                  <a href="#" id="F1_P2_AL1_addLookupBtn" class="AL_addLookupBtn btn btn-primary">Find Address</a>
+                  <div class="AL_manualPrompt">
+                    <small>
+                      <a href="#" class="AL_noPostcode">Enter address Manually</a>
+                    </small>
+                  </div>
+                  <div class="AL_addLookup hidden">
+                    <label for="F1_P2_AL1_addDropDown" class="hidden">Select your address</label>
+                    <select id="F1_P2_AL1_addDropDown" name="F1_P2_AL1_addDropDown" class="AL_addDropDown"><option value="0">Please Select</option></select>
+                  </div>
+                  <div class="FORM_validationFeedback">
+                    <span>(optional) validation text here</span>
+                  </div>
+                  <div class="addManual">
+                  <h4>Please enter your address details</h4>
+                    <label for="F1_P2_AL1_AM_add1">House/Flat No &amp; street</label>
+                    <input type="text" id="F1_P2_AL1_AM_add1" name="F1_P2_AL1_AM_add1" class="AL_AM_add1">
+                    <label for="F1_P2_AL1_AM_street">district</label>
+                    <input type="text" id="F1_P2_AL1_AM_add2" name="F1_P2_AL1_AM_add2" class="AL_AM_street">
+                    <label for="F1_P2_AL1_AM_district">Town/City</label>
+                    <input type="text" id="F1_P2_AL1_AM_district" name="F1_P2_AL1_AM_district" class="AL_AM_district">
+                    <label for="F1_P2_AL1_AM_city">County</label>
+                    <input type="text" id="F1_P2_AL1_AM_city" name="F1_P2_AL1_AM_city" class="AL_AM_city">
+                    <label for="F1_P2_AL1_AM_postcode">Postcode</label><br>
+                    <input type="text" id="F1_P2_AL1_AM_postcode" name="F1_P2_AL1_AM_postcode" class="AL_AM_postcode input-small">
+                  </div>
+                </div>
+              </div>  
+
+              <div class="FORM_control-group FORM_repeater" id="F1_T1_R1">
+              <h3>Repeating Fields</h3>
+              <p>The groups of fields below repeat - the first group in the set cannot be deleted (so it receives a "clear" button instead). Subsequent groups can be deleted. An "Add" button is shown below the last group allowing the addition of more groups.</p>
+              <ol class="FORM_repeater-group">
 
               <li class="F1_T1_R1_G1">
 
@@ -873,64 +982,24 @@
               </li>
               </ol>
               <a class="btn btn-success" href="#">add</a>
-  
+              </div>  
 
-  
-<!--/form step2 end -->      
-      
-    </div>
-    
-        <div class="step-pane active sample-pane alert" data-step="3">
-      <h2>Your family</h2>
-      
-
-<!--form step3-->      
-   <ul class="FORM_pager pager wizard">
+            </div><!--/tab2-->
+            <div class="tab-pane" id="tab3">
+            </div><!--/tab3-->
+            <!--form footer paging-->
+            <ul class="FORM_pager pager wizard">
               <li class="previous first" style="display:none;"><a href="#">First</a></li>
               <li class="previous"><a href="#">Previous</a></li>
               <li class="next last" style="display:none;"><a href="#">Last</a></li>
               <li class="next"><a href="#">Next</a></li>
             </ul>  
-
-
-          
-  
-  
- 
-       
-<!--/form step3 end-->
-        </div>
-        
-           <div class="step-pane active sample-pane alert" data-step="4">
-      <h2>Summary</h2>
-      
-<!--form step4-->
-
-<p>I am a summary of what you have submit in steps 1, 2 and 3. If you're happy with this press submit.</p>
-<p>If not go back and make a change.</p>
-
-				
-
-
-
-<!--/form step4 end-->      
-
-           </div>
-    
-  </form>     
-  </div>
-  <div class="actions col-sm-offset-4">
-  	<!--<input type="reset" class="btn btn-default btn-prev" value="< Back" id="back" disabled="">
-  	<input type="submit" class="btn btn-default btn-primary" value="Next >" id="next" style="display: inline-block;">-->
-  	
-    <button class="btn btn-default btn-prev">Back</button>
-    <button class="btn btn-default btn-primary btn-next" data-last="Submit">Next</button>
-  </div>
-</div>
+          </div><!--tab-content-->
+        </div><!--rootWizard-->
+      </form>
 	
-		
   </div>
-  <div id="rightColumn" class="col-sm-4">
+  <div id="rightColumn" class="col-sm-3">
            		
        </div>
 </div>
@@ -963,9 +1032,14 @@
 
 </div>
 </footer>
+		<script src="/scripts/dev/jquery.min.js"></script>
+		<script src="/scripts/dev/bootstrap.min.js"></script>
+		<script src="/scripts/dev/jquery.dotdotdot.js"></script>
 		<script src="/scripts/app.min.js"></script>
-		<script src="/scripts/fuelux.min.js"></script>
-		<script src="/scripts/bootstrap-datepicker.js"></script>	
+<script type="text/javascript" src="/scripts/forms-min.js"></script>
+
+		
+		<script src="/scripts/app.min.js"></script>
 
 						
 		<!--[if lt IE 9]>
